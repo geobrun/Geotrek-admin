@@ -33,7 +33,7 @@ setup(
     scripts=['manage.py'],
     install_requires=[
         'Django==3.2.*',
-        'mapentity @ git+https://github.com/makinacorpus/django-mapentity.git@master',
+        'mapentity@git+https://github.com/makinacorpus/django-mapentity.git@master',
         'cairosvg',
         'cairocffi',
         'env_file',
