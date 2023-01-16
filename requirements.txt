@@ -206,7 +206,7 @@ large-image-source-vips==1.17.2
     # via geotrek (setup.py)
 lxml==4.9.1
     # via mapentity
-mapentity @ git+https://github.com/makinacorpus/django-mapentity.git@characters-numbers-control
+-e git+https://github.com/makinacorpus/django-mapentity.git@master#egg=mapentity
     # via geotrek (setup.py)
 markdown==3.4.1
     # via geotrek (setup.py)
