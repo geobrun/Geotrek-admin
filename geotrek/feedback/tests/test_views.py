@@ -50,7 +50,7 @@ class ReportViewsetMailSend(TestCase):
             '/api/en/reports/report',
             {
                 'geom': '{\"type\":\"Point\",\"coordinates\":[4.3728446995373815,43.856935212211454]}',
-                'email': 'test_post@geotrek.local',
+                'email': 'test_post@geotrek.localhost',
                 'comment': 'Test comment <>',
                 'activity': feedback_factories.ReportActivityFactory.create().pk,
                 'problem_magnitude': feedback_factories.ReportProblemMagnitudeFactory.create().pk,
@@ -59,7 +59,7 @@ class ReportViewsetMailSend(TestCase):
         self.assertEqual(mail.outbox[1].subject, "Geotrek : Signal a mistake")
         self.assertIn("We acknowledge receipt of your feedback", mail.outbox[1].body)
         self.assertEqual(mail.outbox[1].from_email, settings.DEFAULT_FROM_EMAIL)
-        created_report = feedback_models.Report.objects.filter(email="test_post@geotrek.local").first()
+        created_report = feedback_models.Report.objects.filter(email="test_post@geotrek.localhost").first()
         self.assertEqual(created_report.comment, "Test comment &lt;&gt;")
 
 

@@ -39,9 +39,9 @@ class TestFeedbackModel(TestCase):
         s = f'<a data-pk=\"{self.report.pk}\" href=\"{self.report.get_detail_url()}\" title=\"Report {self.report.eid}\">Report {self.report.eid}</a>'
         self.assertEqual(self.report.name_display, s)
 
-    @override_settings(ALLOWED_HOSTS=["geotrek.local"])
+    @override_settings(ALLOWED_HOSTS=["geotrek.localhost"])
     def test_get_full_url(self):
-        s = f"geotrek.local/report/{self.report.pk}/"
+        s = f"geotrek.localhost/report/{self.report.pk}/"
         self.assertEqual(self.report.full_url, s)
 
 

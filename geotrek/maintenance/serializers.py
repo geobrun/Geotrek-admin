@@ -1,6 +1,7 @@
 from drf_dynamic_fields import DynamicFieldsMixin
 from mapentity.serializers import MapentityGeojsonModelSerializer
 from rest_framework import serializers
+from rest_framework_gis.fields import GeometrySerializerMethodField
 
 from .models import Intervention, Project
 

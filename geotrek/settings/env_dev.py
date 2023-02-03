@@ -35,7 +35,7 @@ MIDDLEWARE += (
 
 
 SYNC_RANDO_OPTIONS = {
-    'url': 'http://geotrek.local:8000'  # Mandatory for dev mode. Must point to the same domain than SERVER_NAME in .env
+    'url': 'http://geotrek.localhost:8000'  # Mandatory for dev mode. Must point to the same domain than SERVER_NAME in .env
 }
 
 LOGGING['loggers']['']['level'] = 'DEBUG'
