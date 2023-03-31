@@ -7,10 +7,14 @@ from django.contrib.auth import views as auth_views
 
 from mapentity.forms import AttachmentForm
 from mapentity.urls import _MEDIA_URL
+from wagtail.admin import urls as wagtailadmin_urls
+from wagtail import urls as wagtail_urls
+from wagtail.documents import urls as wagtaildocs_urls
 
 from geotrek.common import views as common_views
 from geotrek.common.views import add_attachment_accessibility, update_attachment_accessibility, \
     delete_attachment_accessibility, ServeAttachmentAccessibility
+from geotrek.cms.urls import api_router
 
 from paperclip import views as paperclip_views
 
@@ -47,6 +51,10 @@ urlpatterns += [
     path('admin/clearcache/', include('clearcache.urls')),
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
+    path('cms/', include(wagtailadmin_urls)),
+    path('documents/', include(wagtaildocs_urls)),
+    path('pages/', include(wagtail_urls)),
+    path('api/', api_router.urls),
 ]
 
 if 'geotrek.core' in settings.INSTALLED_APPS:

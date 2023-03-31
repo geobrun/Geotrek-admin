@@ -41,6 +41,7 @@ ALLOWED_HOSTS = ['*' if host == '_' else host for host in ALLOWED_HOSTS]
 CACHE_ROOT = os.path.join(VAR_DIR, 'cache')
 
 TITLE = _("Geotrek")
+WAGTAIL_SITE_NAME = 'My Geotrek CMS Site'
 
 DEBUG = False
 TEST = 'test' in sys.argv
@@ -246,6 +247,7 @@ MIDDLEWARE = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'geotrek.authent.middleware.CorsMiddleware',
     'mapentity.middleware.AutoLoginMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 )
 FORCE_SCRIPT_NAME = ROOT_URL if ROOT_URL != '' else None
 ADMIN_MEDIA_PREFIX = '%s/static/admin/' % ROOT_URL
@@ -295,6 +297,20 @@ PROJECT_APPS += (
     'django_large_image',
     'colorfield',
     'mptt',
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail',
+    'modelcluster',
+    'taggit',
+    'wagtail.api.v2',
 )
 
 INSTALLED_APPS = PROJECT_APPS + (
@@ -313,6 +329,7 @@ INSTALLED_APPS = PROJECT_APPS + (
     'geotrek.flatpages',
     'geotrek.feedback',
     'geotrek.api',
+    'geotrek.cms',
 )
 
 CACHES = {

@@ -37,6 +37,7 @@ setup(
         'cairosvg',
         'cairocffi',
         'env_file',
+        'wagtail',
         # pinned by requirements.txt
         'pymemcache',
         'psycopg2',
