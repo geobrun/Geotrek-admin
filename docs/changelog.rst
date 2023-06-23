@@ -5,6 +5,11 @@ CHANGELOG
 2.98.1+dev (XXXX-XX-XX)
 -----------------------
 
+**Improvements**
+
+- Improve cascading deletions logic, and log them to LogEntry model to maintain history of deletions
+- Add rules data on `v_sensitivearea` view  (#3613)
+
 
 2.98.1 (2023-05-30)
 -----------------------
@@ -25,7 +30,6 @@ CHANGELOG
 **Improvements**
 
 - Improve cascading deletions logic, and log them to LogEntry model to maintain history of deletions
-- Add rules data on `v_sensitivearea` view  (#3613)
 
 
 2.98.0     (2023-03-27)
