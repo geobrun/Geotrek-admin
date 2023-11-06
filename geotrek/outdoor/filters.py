@@ -17,7 +17,7 @@ class SiteFilterSet(ZoningFilterSet, StructureRelatedFilterSet):
         field_name='provider',
         empty_label=_("Provider"),
         label=_("Provider"),
-        choices=Site.objects.provider_choices()
+        choices=lambda: Site.objects.provider_choices()
     )
 
     class Meta(StructureRelatedFilterSet.Meta):
@@ -58,7 +58,7 @@ class CourseFilterSet(ZoningFilterSet, StructureRelatedFilterSet):
         field_name='provider',
         empty_label=_("Provider"),
         label=_("Provider"),
-        choices=Course.objects.provider_choices()
+        choices=lambda: Course.objects.provider_choices()
     )
 
     class Meta(StructureRelatedFilterSet.Meta):

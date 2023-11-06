@@ -2,7 +2,42 @@
 CHANGELOG
 =========
 
-2.100.2+dev (XXXX-XX-XX)
+2.101.3+dev (XXXX-XX-XX)
+------------------------
+
+**Bug fixes**
+
+- Fix: filters choices can raise exception in lists and not updated until application restart (#3812)
+- Fix missing geometries for HD `view_points` in APIv2's `/poi/` and `/site/` routes (#3701)
+- Fix cannot click on objects after customizing map styles (#3800)
+
+
+2.101.3     (2023-10-26)
+------------------------
+
+**Bug fixes**
+
+- Fix `sync_rando` admin command failure if Trek has SVG attachment (#3803)
+- Fix provider choices in list filter forms
+
+2.101.2     (2023-10-17)
+------------------------
+
+**Bug fixes**
+
+- Fix Aggregator fails when updating Tour steps order (#3793)
+- Fix services list display error (refs ##3795)
+
+
+2.101.1     (2023-10-06)
+------------------------
+
+**Bug fixes**
+
+- POI cirkwi XML endpoint is fixed (2.101.0 regression) (#3783)
+
+
+2.101.0     (2023-10-05)
 ------------------------
 
 **New features**
@@ -13,6 +48,8 @@ CHANGELOG
 
 - Fix missing update rights for Infrastructure Condition and Infrastructure Type with no structure in Admin Site (#3747)
 - Allow to load a signage with the year set to None, raise error if set to NaN (#3611)
+- Fix filters on Intervention exports (resolve #3749)
+- Fix cities display on string (refs #3585)
 
 **Improvements**
 
@@ -28,9 +65,10 @@ CHANGELOG
 
 - Add new contributors to the authors list in documentation
 - Reorganize settings section (related to PR #3669)
+- Update WYSIWYG link to help user when creating labels
 
 
-2.100.2 (2023-09-12)
+2.100.2     (2023-09-12)
 ------------------------
 
 **Improvements**
@@ -55,7 +93,7 @@ CHANGELOG
 - Increase length size of label on TouristicEventOrganizer model to fix migrations problems (#3719)
 
 
-2.100.1 (2023-09-05)
+2.100.1      (2023-09-05)
 -------------------------
 
 **Documentation**
@@ -71,7 +109,7 @@ CHANGELOG
 - Remove unused folder 'bulkimport' from project (#3673)
 
 
-2.100.0 (2023-09-05)
+2.100.0    (2023-09-05)
 -----------------------
 
 **DO NOT USE**
@@ -110,7 +148,7 @@ CHANGELOG
 - Upgrade `django-mapentity`
 
 
-2.99.0 (2023-07-18)
+2.99.0     (2023-07-18)
 -----------------------
 
 **New features**
@@ -138,7 +176,7 @@ CHANGELOG
 - Upgrade `django-mapentity`
 
 
-2.98.1 (2023-05-30)
+2.98.1     (2023-05-30)
 -----------------------
 
 **Bug fixes**
