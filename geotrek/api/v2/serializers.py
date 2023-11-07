@@ -1414,7 +1414,7 @@ if 'geotrek.signage' in settings.INSTALLED_APPS:
 
         class Meta:
             model = signage_models.Signage
-            fields = ('id', 'attachments', 'blades', 'code', 'condition', 'description', 'eid',
+            fields = ('id', 'attachments', 'blades', 'code', 'conditions', 'description', 'eid',
                       'geometry', 'implantation_year', 'name', 'printed_elevation', 'provider', 'sealing',
                       'structure', 'type', 'uuid')
 
